@@ -1,0 +1,97 @@
+<html>
+
+<head>
+
+<script type="text/javascript">
+
+function display(){
+
+var names=["男神的名字","女神的名字"];
+
+var name=document.getElementById("name").value;
+
+var show=document.getElementById("show");
+
+show.innerHTML="";
+
+var flag=false;
+
+while(true){
+
+var colorCode="rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")";
+
+if(colorCode!="rgb(255,255,255)"){
+
+break;
+
+}
+
+}
+
+show.style.color=colorCode;
+
+for(var str in names){
+
+if(names[str]==name){
+
+flag=true;
+
+}
+
+}
+
+if(name==""||name==null){
+
+var text=document.createTextNode("请先输入真实姓名!");
+
+show.appendChild(text);
+
+}else if(flag==true){
+
+var text=document.createTextNode(name+"，你好，祝你七夕快乐!");
+
+show.appendChild(text);
+
+}else if(name=="你的名字"){
+
+var text=document.createTextNode(name+"是个大帅比！");
+
+show.appendChild(text);
+
+}else{
+
+var text=document.createTextNode(name+"宝宝，你就是我命中注定的人，七夕快乐");
+
+show.appendChild(text);
+
+}}
+
+</script>
+
+</head>
+
+<body style="background:#EED5D2" >
+
+<br/>
+
+<div align="center" style="background:yellow;width:300px;height:200px;margin:0 auto;box-shadow:3 3 3 blue">
+
+<div style="width:100%;height:35%;" ></div>
+
+<div aligin="center" style="font-family:仿宋;font-size:20px" >请输入你的姓名：<input id="name" type="text"></input></div>
+
+<input type="button" style="box-shadow:3 3 3 blue" value="确定" onclick="display()"></input>
+
+</div>
+
+<br/>
+
+<div id="show" align="center" style="height:500px;width:900px;;margin:0 auto;background:#F5FFFA;box-shadow:3 3 3 blue;font-size:20px;font-family:仿宋;vertical-align:middle;word-wrap:break-word;overflow:hidden;line-height:50px;line-height:500px">
+
+<h1>七夕快乐！<h1>
+
+</div>
+
+</body>
+
+</html>
